@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/design.css') }}">
+    <meta charset="UTF-8">
+    <title>Movie Genre Predictor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+        <div class="bg-image">    
+        </div>
+        <div id = "header">
+            <h1 class="Title">Movie Genre Predictor</h1>
+            <h3 class="Title">A Web App Using Flask,deployed in Heroku</h3>
+        </div>
+        <form action="/predict" method="POST">
+        <div class="box">
+          <textarea name="review" id = "textReview" placeholder="Enter Your Dialogue here..." rows = 15 cols = 75 ></textarea>
+        </div>
+        <div id = "button">
+            <button class="glow-on-hover" type="submit">PREDICT</button>
+        </div>
+
+        </form>
+        <div class="footer">
+           <h4>Made With <i class="fa fa-heart" aria-hidden="true" style="font-size:26px;color:red"></i> By Girish Mehra</h4>
+            <a href="https://www.github.com/girishmehra713/"><i class="fa fa-github" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/girishmehra713/"><i class="fa fa-instagram" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/girishmehra713/"><i class="fa fa-linkedin" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+        </div>
+
+   
+</body>
+</html>

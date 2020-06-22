@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}">
+		<meta charset="utf-8">
+		<title>Movie Genre Predictor</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class="bg-image">    
+        </div>
+
+		<!-- Website Title -->
+		<div id = "header">
+            <h1 class="Title">Movie Genre Predictor</h1>
+            <h3 class="Title">A Web App Using Flask,deployed in Heroku</h3>
+        </div>
+        <div class="box">
+		<!-- Result -->
+			<div>
+				{% if prediction==0 %}
+					<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >I cant't classify its Genre..</span></h1>
+				{% elif prediction==1 %}
+					<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> action</b>movie..</span></h1>
+				{% elif prediction==2 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> adventure </b>movie..</span></h1>
+
+				{% elif prediction==3 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> comedy </b>movie..</span></h1>
+				{% elif prediction==4 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> drama </b>movie..</span></h1>
+				{% elif prediction==5 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> horror </b>movie..</span></h1>
+				{% elif prediction==6 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> romance </b>movie..</span></h1>
+				{% elif prediction==7 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> sci-fi </b>movie..</span></h1>
+				{% elif prediction==8 %}
+				<h1 style="margin-left: 20px;">Prediction: <span  style = "margin-left: 30px; color: #fff;" >It is a <b> thriller </b>movie..</span></h1>
+				{% endif %}
+			</div>
+	    </div>
+	    <form action="/" , method="GET">
+	    <div id = "button">
+            <button class="glow-on-hover" type="submit">Try Another Dialogue</button>
+        </div>
+        </form>
+		<!-- Footer -->
+        <div class="footer">
+            <h4>Made With <i class="fa fa-heart" aria-hidden="true" style="font-size:26px;color:red"></i> By Girish Mehra</h4>
+            <a href="https://www.github.com/girishmehra713/"><i class="fa fa-github" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/girishmehra713/"><i class="fa fa-instagram" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/girishmehra713/"><i class="fa fa-linkedin" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+        </div>
+
+	</body>
+</html>
